@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/orderdb
+    username: order_user
+    password: secret
+  jpa:
+    hibernate.ddl-auto: update
+
+kafka:
+  bootstrap-servers: kafka:9092
+  topic: orders
+
+management:
+  endpoints:
+    web.exposure.include: health,info,prometheus
