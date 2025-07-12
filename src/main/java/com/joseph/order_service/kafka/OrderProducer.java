@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class OrderProducer {
     private final KafkaTemplate<String, Order> kafka;
-    @Value("${kafka.topic}") private String topic;
+    @Value("${app.kafka.topic}") private String topic;
 
     public void send(Order o) { kafka.send(topic, String.valueOf(o.getId()), o); }
 }
