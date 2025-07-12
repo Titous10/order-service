@@ -15,7 +15,8 @@ services:
       - postgres
       - kafka
     networks:
-      - application
+      - application-network
 
 networks:
-  application:
+  application-network:
+    external: true
