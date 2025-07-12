@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://192.168.12.183:5432/orders
+    username: order_user
+    password: order_pass
+  jpa:
+    hibernate.ddl-auto: update
+
+kafka:
+  bootstrap-servers: kafka:9092
+  topic: orders
+
+management:
+  endpoints:
+    web.exposure.include: health,info,prometheus
