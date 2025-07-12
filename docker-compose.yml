@@ -11,12 +11,10 @@ services:
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
     ports:
       - "8085:8080"
-    depends_on:
-      - postgres
-      - kafka
     networks:
       - application-network
 
 networks:
   application-network:
     external: true
+    name: application-network
