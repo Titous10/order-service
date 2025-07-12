@@ -14,6 +14,6 @@ import lombok.Setter;
 public class Order {
     @Id
     @GeneratedValue
-    private String id;
+    private long id;
     private String name;
 }
