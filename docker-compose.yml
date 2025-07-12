@@ -5,7 +5,7 @@ services:
     container_name: order-service
     environment:
       - SPRING_PROFILES_ACTIVE=prod
-      - POSTGRES_URL=jdbc:postgresql://postgres:5432/orders
+      - POSTGRES_URL=jdbc:postgresql://192.168.12.183:5432/orders
       - POSTGRES_USER=order_user
       - POSTGRES_PASSWORD=order_pass
       - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
