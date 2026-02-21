@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PaymentConsumer {
-    //@KafkaListener(topics = "orders", groupId = "payment-group")
+    @KafkaListener(topics = "orders", groupId = "payment-group")
     public void consume(OrderEvent event) throws InterruptedException {
 
         System.out.println("Processing payment: " + event.orderId());
