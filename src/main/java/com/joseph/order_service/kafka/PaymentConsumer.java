@@ -5,7 +5,6 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@KafkaListener(topics = "orders", groupId="payment-group")
 public class PaymentConsumer {
     @KafkaListener(topics = "orders", groupId = "payment-group")
     public void consume(OrderEvent event) throws InterruptedException {
