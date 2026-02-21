@@ -25,7 +25,7 @@ public class OrderController {
     @PostMapping("/place")
     public Order create(@RequestBody Order o) {
         Order saved = repo.save(o);
-        producer.send(saved);
+       // producer.send(saved);
         return saved;
     }
 
