@@ -7,8 +7,14 @@ spring:
     hibernate.ddl-auto: update
 
 kafka:
-  bootstrap-servers: kafka:9092
-  topic: orders
+  bootstrap-servers: localhost:9092
+  producer:
+    acks: all
+    retries: 10
+    properties:
+      enable.idempotence: true
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 management:
   endpoints:
